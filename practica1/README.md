@@ -68,3 +68,7 @@ El html de ejemplo es el siguiente:
 Obteniendo la siguiente captura:
 
 ![curl-html](./img/curl-html.png)
+
+Por solicitud del profesor para la práctica, adjunto otra captura mostrando el uso de touch para la verificación correcta del ssh.
+
+![touch-ssh](./img/touch-ssh.png)
