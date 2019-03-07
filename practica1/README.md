@@ -19,7 +19,7 @@ Para realizarlo, en VirtualBox se le da a File, Host Network Manager..., creamos
 
 Como se puede observar, tiene el DHCP Server estático para configurar nosotros la ip de la máquina. Tras esto le añadimos el adaptador en la configuración:
 ![config-adapter](./img/config-adapter.png)
-Por último quedaría arrancarla y añadir al final del archivo `/etc/network/interfaces` lo siguiente:
+Tras esto la arrancamos y añadimos al final del archivo `/etc/network/interfaces` lo siguiente:
 ```bash
 # The secondary network 
 auto enp0s8
