@@ -19,7 +19,7 @@ Para realizarlo, en VirtualBox se le da a File, Host Network Manager..., creamos
 
 Como se puede observar, tiene el DHCP Server estático para configurar nosotros la ip de la máquina. Tras esto le añadimos el adaptador en la configuración:
 ![config-adapter](./img/config-adapter.png)
-Por último quedaría arrancarla y añadir al final del archivo `/etc/network/interfaces` lo siguiente:
+Tras esto la arrancamos y añadimos al final del archivo `/etc/network/interfaces` lo siguiente:
 ```bash
 # The secondary network 
 auto enp0s8
@@ -68,7 +68,10 @@ El html de ejemplo es el siguiente:
 Obteniendo la siguiente captura:
 
 ![curl-html](./img/curl-html.png)
+<<<<<<< HEAD
 
 Por solicitud del profesor para la práctica, adjunto otra captura mostrando el uso de touch para la verificación correcta del ssh.
 
 ![touch-ssh](./img/touch-ssh.png)
+=======
+>>>>>>> 959da16fb21559f49f22ea68a0fe6734d3a16777
