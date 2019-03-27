@@ -55,10 +55,10 @@ global
         maxconn 256
 
 defaults
-        mode http
-        contimeout 4000
-        clitimeout 42000
-        srvtimeout 43000
+        mode http		# Actualmente se usa lo siguiente
+        contimeout 4000		# timeout connect
+        clitimeout 42000	# timeout client
+        srvtimeout 43000	# timeout server
 
 frontend http-in
         bind *:80
@@ -69,7 +69,7 @@ backend servers
         server m2 192.168.56.11:80 maxconn 32
 ```
 
-Tras añadirlo hay que activarlo con el comando `sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg`. Al ejecutarlo en la terminal muestra que esto funciona pero que en futuras versiones se le dejará de dar soporte.
+Tras añadirlo hay que activarlo con el comando `sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg`. Al ejecutarlo en la terminal muestra que esto funciona pero que en futuras versiones se le dejará de dar soporte. En el cuadro de encima he indicado el nombre de la configuración que se utiliza actualmente para cuando dejen de darle soporte.
 
 ![deprecated-haproxy](./img/deprecated-haproxy.png)
 
