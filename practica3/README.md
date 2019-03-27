@@ -47,7 +47,7 @@ Nota: He añadido *weight=1* y *weight=2* en los server para mandar el doble de 
 
 ## Uso de haproxy
 
-Este es el otro programa que vamos a utilizar para el balanceo de carga. Para ello realizamos la isntalación en la máquina 3 y modificamos el archivo `/etc/haproxy/haproxy.cfg`.
+Este es el otro programa que vamos a utilizar para el balanceo de carga. Para ello realizamos la instalación en la máquina 3 y modificamos el archivo `/etc/haproxy/haproxy.cfg`.
 
 ```bash
 global
