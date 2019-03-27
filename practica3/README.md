@@ -47,3 +47,44 @@ Nota: He añadido *weight=1* y *weight=2* en los server para mandar el doble de 
 
 ## Uso de haproxy
 
+Este es el otro programa que vamos a utilizar para el balanceo de carga. Para ello realizamos la isntalación en la máquina 3 y modificamos el archivo `/etc/haproxy/haproxy.cfg`.
+
+```bash
+global
+        daemon
+        maxconn 256
+
+defaults
+        mode http
+        contimeout 4000
+        clitimeout 42000
+        srvtimeout 43000
+
+frontend http-in
+        bind *:80
+        default_backend servers
+
+backend servers
+        server m1 192.168.56.10:80 maxconn 32
+        server m2 192.168.56.11:80 maxconn 32
+```
+
+Tras añadirlo hay que activarlo con el comando `sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg`. Al ejecutarlo en la terminal muestra que esto funciona pero que en futuras versiones se le dejará de dar soporte.
+
+![deprecated-haproxy](./img/deprecated-haproxy.png)
+
+A continuación incluyo la captura en la que está funcionando:
+
+![haproxy](./img/haproxy-status.png)
+
+## Utilización del benchmark
+
+Vamos a utilizar el benchmark de apache para probar el soporte del servidor web montado. Primero vamos a utilizar el nginx como distribuidor de carga. El comando para realizar las solicitudes de apache las vamos a realizar desde la máquina 4, con el comando `ab -n 10000 -c 100 http://192.168.56.12/index.html`
+
+Aqui la captura de nginx mostrando el comando `htop` en las máquinas:
+![bench-nginx](./img/benchmark-nginx.png)
+
+Hay que tener en cuenta que la máquina 2 se le mandan más solicitudes por la configuración que se ha realizado.
+
+Por último la captura de haproxy al igual que en el caso anterior:
+![bench-haproxy](./img/benchmark-haproxy.png)
