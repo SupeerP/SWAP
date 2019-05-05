@@ -6,11 +6,11 @@ El objetivo de esta práctica es lelvar a cabo la configuración de seguridad de
 
 ## Instalación del certificado SSL autofirmado para el acceso por HTTPS
 
-Para ello tendremos que activar el módulo SSL de Apahce, generar los certificados y especificarle la ruta a los certificados en la condigueación. Para ello ejecutamos lo siguiente:
+Para ello tendremos que activar el módulo SSL de Apahce, generar los certificados y especificarle la ruta a los certificados en la configuración. Para ello ejecutamos lo siguiente:
 
 ```bash
 a2enmod ssl     #Activamos el modulo de ssl de apache2
-servce apache2 restart
+service apache2 restart
 mkdir /etc/apache2/ssl
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
 ```
