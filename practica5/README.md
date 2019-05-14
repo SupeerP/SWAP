@@ -69,3 +69,11 @@ Por último, volvemos al maestro y activamos las tablas para que puedan meterse 
 En el esclavo, para comprobar que todo funciona bien, mostramos lo siguiente. Si la variable `Seconds_Behind_Master` fuese null, sería por algún error. En mi caso es 0, por lo que todo funciona como debe:
 
 ![slave-status](./img/slave-status.png)
+
+## Cosas a tener en cuenta
+
+Si os da error debido al UUID ya que la máquina 2 es un clonado de la máquina 1, y al ejecutar el comando `blkid`, podemos apreciar que tiene el mismo nombre. Con esto MySQL nos dará un error. Para solucionarlo, eliminamos el archivo auto.cnf
+
+```bash
+sudo rm /var/lib/mysql/auto.cnf
+```
