@@ -1,4 +1,4 @@
-# Práctica 4. Asegurar la granja web
+# Práctica 6. Servidor de disco NFS
 
 El objetivo principal de esta práctica es configurar un servidor NFS para exportar un espacio en disco a los servidores finales (que actuarán como clientes-NFS).
 
