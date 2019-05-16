@@ -16,5 +16,5 @@ En esta asignatura se va a aprender a usar las tecnologias orientadas a la creac
 - [Práctica 3](./practica3/README.md)
 - [Práctica 4](./practica4/README.md)
 - [Práctica 5](./practica5/README.md)
-- [Práctica 6](./práctica6/README.md)
+- [Práctica 6](./practica6/README.md)
 - [Trabajo final](./trabajo/README.md)
