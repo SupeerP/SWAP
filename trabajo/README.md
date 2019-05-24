@@ -198,3 +198,10 @@ Como recomendaciones personales por si se quiere realizar un proyecto similar.
 Hay muchas herramientas para asegurar nginx, siendo la más básica un cortafuegos con iptables, o la obtención de un certificado para una máquina con certbot.
 
 También es muy importante comprobar el estado del servicio ya que es una buena manera de mantenimiento de la granja web por si se detecta cualquier actividad sospechosa, actuar rápidamente.
+
+
+# Bibliografía
+
+- [Certbot](https://certbot.eff.org/)
+- [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-elasticsearch-logstash-and-kibana-elastic-stack-on-ubuntu-18-04)
+- [ELK Stack](https://www.elastic.co/guide/index.html)
